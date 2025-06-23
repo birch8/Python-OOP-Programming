@@ -59,6 +59,7 @@ class LabraDoodle(Poodle,Labrador):
 
     def walking_speed(self):
         return super().walking_speed() # This returns "Prance", as it inherits Poodle from super() *before* Labrador
+        # return Labrador.walking_speed(self) # This returns the Labrador (explicityly stated)
 ################################################
 
 bob = Poodle('Bob', 2, 'small')
