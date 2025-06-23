@@ -57,8 +57,8 @@ class LabraDoodle(Poodle,Labrador):
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
 
-    def walking_speed(Labrador):
-        return "Run"
+    def walking_speed(self):
+        return super().walking_speed() # This returns "Prance", as it inherits Poodle from super() *before* Labrador
 ################################################
 
 bob = Poodle('Bob', 2, 'small')
@@ -66,12 +66,14 @@ print(bob.name, bob.age, bob.size)
 print(bob.likes_walks())
 print(bob.walking_speed())
 
-# swiftie = LabraDoodle('Swiftie', 1, "Medium")
-# print(swiftie.name, swiftie.age, swiftie.size)
-# print(swiftie.low_alergen())
-# print(swiftie.temperament())
-# print(swiftie.walking_speed())
+print("Sussy doggo")
+swiftie = LabraDoodle('Swiftie', 1, "Medium")
+print(swiftie.name, swiftie.age, swiftie.size)
+print(swiftie.low_alergen())
+print(swiftie.temperament())
+print(swiftie.walking_speed())
 
+print("Basic doggo")
 basic_doggo = Dog('Henry', 4, 'Large')
 print(basic_doggo.name, basic_doggo.age, basic_doggo.size)
 print(basic_doggo.walking_speed())
