@@ -35,23 +35,26 @@ class Labrador(Dog):
     def walking_speed(self):
         return "Run"
        
+# Teacher's note: Don't use multiple inheritance if you can avoid it!
+# Results may be unpredictable and we don't like unpredictable things in software engineering!
 class LabraDoodle(Poodle,Labrador):
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
 
     def walking_speed(Labrador):
         return "Run"
-   
+################################################
+
 bob = Poodle('Bob', 2, 'small')
 print(bob.name, bob.age, bob.size)
 print(bob.likes_walks())
 print(bob.walking_speed())
 
-swiftie = LabraDoodle('Swiftie', 1, "Medium")
-print(swiftie.name, swiftie.age, swiftie.size)
-print(swiftie.low_alergen())
-print(swiftie.temperament())
-print(swiftie.walking_speed())
+# swiftie = LabraDoodle('Swiftie', 1, "Medium")
+# print(swiftie.name, swiftie.age, swiftie.size)
+# print(swiftie.low_alergen())
+# print(swiftie.temperament())
+# print(swiftie.walking_speed())
 
 basic_doggo = Dog('Henry', 4, 'Large')
 print(basic_doggo.name, basic_doggo.age, basic_doggo.size)
