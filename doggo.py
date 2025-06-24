@@ -1,3 +1,5 @@
+# Define a class called dog. Basic attributes of name, age, size.
+# Methods of likes_walks and walking_speed
 class Dog:
     def __init__(self, name, age, size):
         self.name = name
@@ -9,15 +11,17 @@ class Dog:
     
     def walking_speed(self):
         return "Walk"
-    
-class Poodle(Dog):
+
+# Subclasses of Dog are defined below
+# Make a poodle subclass, which is "low alergen" and prances
+class Poodle(Dog): 
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
 
-    def low_alergen(self):
+    def low_alergen(self): # Define a new method called low_alergen??
         return "Yes"
 
-    def walking_speed(self):
+    def walking_speed(self): # Inherit the method but override the return
         return "Prance"
             
 class Labrador(Dog):
@@ -79,6 +83,7 @@ basic_doggo = Dog('Henry', 4, 'Large')
 print(basic_doggo.name, basic_doggo.age, basic_doggo.size)
 print(basic_doggo.walking_speed())
 
+# Instantiate a CavalierKingCharlesSpaniel object called Zeno
 zeno = CavalierKingCharlesSpaniel('Zeno', 2, 'medium')
 print(zeno.temperament())
 print(zeno.walking_speed())
