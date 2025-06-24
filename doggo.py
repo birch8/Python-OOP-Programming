@@ -84,6 +84,7 @@ print(basic_doggo.name, basic_doggo.age, basic_doggo.size)
 print(basic_doggo.walking_speed())
 
 # Instantiate a CavalierKingCharlesSpaniel object called Zeno
+print("Zeno's information:")
 zeno = CavalierKingCharlesSpaniel('Zeno', 2, 'medium')
 print(zeno.temperament())
 print(zeno.walking_speed())
