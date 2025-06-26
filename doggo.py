@@ -9,6 +9,9 @@ class Dog:
     
     def walking_speed(self):
         return "Walk"
+    
+    def introduce(self):
+        return f"WOOF! My name is {self.name}. I'm {self.age} years old and my size is {self.size}!"
 
 # Subclasses of Dog are defined below
 # Make a poodle subclass, which is "low alergen" and prances
@@ -61,6 +64,9 @@ class LabraDoodle(Poodle,Labrador):
         return super().walking_speed() # This returns "Prance", as it inherits Poodle from super() *before* Labrador
         # return Labrador.walking_speed(self) # This returns the Labrador (explicityly stated)
 ################################################
+sam = Dog('Sam', 5, 'enormous')
+print("#### Sam's information ####")
+print(sam.introduce())
 
 bob = Poodle('Bob', 2, 'small')
 print(bob.name, bob.age, bob.size)
