@@ -1,13 +1,11 @@
 # Define a class called dog. Basic attributes of name, age, size.
 # Methods of likes_walks and walking_speed
 class Dog:
+    likes_walks = True
     def __init__(self, name, age, size):
         self.name = name
         self.age = age
         self.size = size
-
-    def likes_walks(self):
-        return True
     
     def walking_speed(self):
         return "Walk"
@@ -15,7 +13,7 @@ class Dog:
 # Subclasses of Dog are defined below
 # Make a poodle subclass, which is "low alergen" and prances
 class Poodle(Dog): 
-    isLowAllergen = True # Use attribute instead of method
+    is_low_allergen = True # Use attribute instead of method
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
 
@@ -66,14 +64,14 @@ class LabraDoodle(Poodle,Labrador):
 
 bob = Poodle('Bob', 2, 'small')
 print(bob.name, bob.age, bob.size)
-print(bob.likes_walks())
+print(bob.likes_walks)
 print(bob.walking_speed())
-print(bob.isLowAllergen)
+print(bob.is_low_allergen)
 
 print("Sussy doggo")
 swiftie = LabraDoodle('Swiftie', 1, "Medium")
 print(swiftie.name, swiftie.age, swiftie.size)
-print(swiftie.isLowAllergen)
+print(swiftie.is_low_allergen)
 print(swiftie.temperament())
 print(swiftie.walking_speed())
 
