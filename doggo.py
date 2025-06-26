@@ -15,11 +15,9 @@ class Dog:
 # Subclasses of Dog are defined below
 # Make a poodle subclass, which is "low alergen" and prances
 class Poodle(Dog): 
+    isLowAllergen = True # Use attribute instead of method
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
-
-    def low_alergen(self): # Define a new method called low_alergen??
-        return "Yes"
 
     def walking_speed(self): # Inherit the method but override the return
         return "Prance"
@@ -70,11 +68,12 @@ bob = Poodle('Bob', 2, 'small')
 print(bob.name, bob.age, bob.size)
 print(bob.likes_walks())
 print(bob.walking_speed())
+print(bob.isLowAllergen)
 
 print("Sussy doggo")
 swiftie = LabraDoodle('Swiftie', 1, "Medium")
 print(swiftie.name, swiftie.age, swiftie.size)
-print(swiftie.low_alergen())
+print(swiftie.isLowAllergen)
 print(swiftie.temperament())
 print(swiftie.walking_speed())
 
