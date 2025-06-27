@@ -25,6 +25,15 @@ class Dog:
             return "WOOF! I'm low allergen!"
         else:
             return "WOOF! I'm NOT low allergen! Am I high allergen??"
+        
+    def temperament(self):
+        print(f"{self.name}'s temperament is:")
+        if self.age < 2:
+            return "Jumpy"
+        elif self.age <10:
+            return "Fun Loving"
+        else:
+            return "Getting slower"
 
 # Subclasses of Dog are defined below
 # Make a poodle subclass, which is low allergen and prances
@@ -41,6 +50,7 @@ class Labrador(Dog):
         super().__init__(name, age, size)
 
     def temperament(self):
+        print(f"{self.name}'s temperament is:")
         if self.age < 2:
             return "Flighty"
         elif self.age <10:
@@ -55,12 +65,13 @@ class CavalierKingCharlesSpaniel(Dog):
         super().__init__(name, age, size) # Inherit __init__ from base class
 
     def temperament(self):
+        print(f"{self.name}'s temperament is:")
         if self.age < 2:
-            return "Flighty"
+            return "Energetic"
         elif self.age <10:
-            return "Fun Loving"
+            return "Powerful"
         else:
-            return "Getting slower"
+            return "Wise"
 
 # Teacher's note: Don't use multiple inheritance if you can avoid it!
 # Results may be unpredictable and we don't like unpredictable things in software engineering!
@@ -69,7 +80,7 @@ class LabraDoodle(Poodle,Labrador):
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
     
-    # Currently the LabraDoodle also has inherited the temperament method from Labrador, which isn't found in Poodle.
+    # Currently the LabraDoodle also has inherited the Flighty part of the temperament method from Labrador, which isn't found in Poodle.
 
 ################################################
 sam = Dog('Sam', 5, 'enormous')
