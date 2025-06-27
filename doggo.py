@@ -68,6 +68,10 @@ sam = Dog('Sam', 5, 'enormous')
 print("#### Sam's information ####")
 print(sam.introduce())
 
+jerry = Dog('Jerry', 3, 'wide')
+print("#### Jerry's information ####")
+print(jerry.introduce())
+
 bob = Poodle('Bob', 2, 'small')
 print(bob.name, bob.age, bob.size)
 print(bob.likes_walks)
