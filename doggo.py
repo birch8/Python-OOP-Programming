@@ -16,6 +16,7 @@ class Dog:
             return f"WOOF! Not a fan of walks myself."
     
     def introduce(self):
+        print(f"#### {self.name}'s information ####")
         return f"WOOF! My name is {self.name}. I'm {self.age} years old and my size is {self.size}!"
 
 # Subclasses of Dog are defined below
@@ -57,30 +58,26 @@ class CavalierKingCharlesSpaniel(Dog):
 # Teacher's note: Don't use multiple inheritance if you can avoid it!
 # Results may be unpredictable and we don't like unpredictable things in software engineering!
 class LabraDoodle(Poodle,Labrador):
+    # LabraDoodles by default inherit the walking_speed of the Poodle (it's the first argument) - in this case it's a Prance
     def __init__(self, name, age, size):
         super().__init__(name, age, size)
 
-    def walking_speed(self):
-        return super().walking_speed() # This returns "Prance", as it inherits Poodle from super() *before* Labrador
-        # return Labrador.walking_speed(self) # This returns the Labrador (explicityly stated)
 ################################################
 sam = Dog('Sam', 5, 'enormous')
-print("#### Sam's information ####")
 print(sam.introduce())
 
 jerry = Dog('Jerry', 3, 'wide')
-print("#### Jerry's information ####")
 print(jerry.introduce())
 
 bob = Poodle('Bob', 2, 'small')
-print(bob.name, bob.age, bob.size)
-print(bob.likes_walks)
+print(bob.introduce())
+print(f"Bob likes walks: {bob.likes_walks}")
+print(f"Bob is low allergen: {bob.is_low_allergen}")
 print(bob.go_on_walk())
-print(bob.is_low_allergen)
 
 print("Sussy doggo")
 swiftie = LabraDoodle('Swiftie', 1, "Medium")
-print(swiftie.name, swiftie.age, swiftie.size)
+print(swiftie.introduce())
 print(swiftie.is_low_allergen)
 print(swiftie.temperament())
 print(swiftie.go_on_walk())
