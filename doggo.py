@@ -22,9 +22,9 @@ class Dog:
     
     def allergen_check(self): # Allergen check
         if self.is_low_allergen == True:
-            return "I'm low allergen!"
+            return "WOOF! I'm low allergen!"
         else:
-            return "I'm NOT low allergen! Am I high allergen??"
+            return "WOOF! I'm NOT low allergen! Am I high allergen??"
 
 # Subclasses of Dog are defined below
 # Make a poodle subclass, which is low allergen and prances
@@ -91,13 +91,12 @@ print(swiftie.allergen_check())
 print(swiftie.temperament())
 print(swiftie.go_on_walk())
 
-print("Basic doggo")
 basic_doggo = Dog('Henry', 4, 'Large')
-print(basic_doggo.name, basic_doggo.age, basic_doggo.size)
+print(basic_doggo.introduce())
 print(basic_doggo.go_on_walk())
 
 # Instantiate a CavalierKingCharlesSpaniel object called Zeno
-print("Zeno's information:")
 zeno = CavalierKingCharlesSpaniel('Zeno', 2, 'medium')
+print(zeno.introduce())
 print(zeno.temperament())
 print(zeno.go_on_walk())
